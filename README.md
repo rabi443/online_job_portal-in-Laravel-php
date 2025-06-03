@@ -121,3 +121,19 @@ step-5:Commit and Push Your Code by command:
         git branch -M main
         git push -u origin main
 
+# Once you’ve made changes to any file in your project and want to update them on GitHub, just follow these simple steps:
+
+step-1: To stage all modified files, run command : git add .
+        OR
+        To stage just the file marked M, run command : it add file_Path
+
+step-2:  Commit the Change 
+        run command : git commit -m "your message "
+
+step-3:  Push to GitHub
+        run command : git push origin main
+
+# Bonus Tip:
+To check the meaning of Git status codes: 
+        run command : git status
+
