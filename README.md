@@ -97,3 +97,27 @@ Mail::raw('This is a test email', function($message) {
 If your Gmail is set up correctly, you should receive the email.
 
 ##
+
+
+# Steps to push your project whole folder in github.
+step-1:Create repository.
+step-2:In your terminal or command prompt, go to your project directory then, 
+        run command : git init
+step-3:Add GitHub Remote Repository
+        Copy the remote URL from GitHub (e.g., https://github.com/username/project_name.git), and 
+        run command : git remote add origin https://github.com/username/project_name.git
+step-4:Make sure your project has a .gitignore file, if not, create one and add this:
+        /vendor
+        /node_modules
+        .env
+        .DS_Store
+        /public/storage
+        /storage/*.key
+        .idea
+
+step-5:Commit and Push Your Code by command:
+        git add .
+        git commit -m "Initial commit of Laravel project"
+        git branch -M main
+        git push -u origin main
+
