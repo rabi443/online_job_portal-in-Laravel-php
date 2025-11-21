@@ -92,6 +92,10 @@
                             </div>
                         </div>
                     </div>
+
+
+
+
                     <div class="card account-nav border-0 shadow mb-4 mb-lg-0">
                         <div class="card-body p-0">
                             <ul class="list-group list-group-flush">
@@ -131,7 +135,10 @@
                     </div>
                 </div>
     
+
+
                 <div class="col-lg-9">
+
                     @if(session('success'))
                         <div class="alert alert-success">
                             {{ session('success') }}
@@ -155,6 +162,9 @@
                     <div class="text-end mb-3">
                         <button id="editButton" class="btn btn-primary">Edit</button>
                     </div>
+
+
+
 
                     <!-- Edit Mode -->
                     <div id="editMode" style="display: none;">
@@ -229,8 +239,11 @@
                             </div>
                         </form>
                     </div>
+
                 </div>
+
             </div>
+
         </div>
     </section>
     

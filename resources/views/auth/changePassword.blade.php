@@ -1,4 +1,4 @@
-<form method="POST" action="{{ route('change-password') }}">
+{{-- <form method="POST" action="{{ route('change-password') }}">
     @csrf
     <label for="current_password">Current Password</label>
     <input type="password" name="current_password" required>
@@ -24,4 +24,4 @@
 
 @error('new_password')
     <p style="color: red;">{{ $message }}</p>
-@enderror
+@enderror --}}

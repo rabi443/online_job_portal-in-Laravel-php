@@ -116,7 +116,7 @@
                             </a>
                             <p class="mb-0">
                                 <span>{{ $category->jobs_count }}</span>
-                                Available Job{{ $category->jobs_count !== 1 ? 's' : '' }}
+                                Available Job{{ $category->jobs_count !== 1 ? "'s" : '' }}
                             </p>
                         </div>
                     </div>

@@ -19,9 +19,6 @@ use App\Http\Controllers\WalletController;
 
 
 //dashboard route
-// Route::get('/', function () {
-//     return view('create');
-// });
 Route::get('/', [JobController::class, 'index'])->name('dashboard');
 
 // Show registration form route and handle registration
@@ -37,10 +34,6 @@ Route::get('/otp/{user_id}', function ($user_id) {
 
 Route::post('/verify-otp', [UserController::class, 'verifyOtp'])->name('verifyOtp');
 Route::post('/cancel-otp', [UserController::class, 'cancelOtpVerification'])->name('cancelOtp');
-
-// Route::post('/send-otp', [UserController::class, 'sendOtp'])->name('sendOtp');
-// Route::post('/verify-otp', [UserController::class, 'verifyOtp'])->name('verifyOtp');
-// Route::post('/cancel-otp', [UserController::class, 'cancelOtp'])->name('cancelOtp');
 
 // Show login form route
 Route::view('/login', 'auth.login')
@@ -62,7 +55,7 @@ Route::get('/reset-password/{token}', function ($token) {
 Route::post('reset-password', [NewPasswordController::class, 'resetPassword'])->middleware('guest')->name('password.update');  // Handle password reset
 
 // Change passwordForm route
-Route::view('/change-password', 'auth.changePassword')->middleware('auth') ->name('change.password');
+// Route::view('/change-password', 'auth.changePassword')->middleware('auth') ->name('change.password');
 // Change password handle route
 Route::post('/change-password', [ProfileController::class, 'changePassword'])->name('change-password')->middleware('auth');
 
@@ -132,6 +125,9 @@ Route::get('/reject-applicants/{applicant_id}', [JobApplicationController::class
 Route::post('/interview/send/{id}', [JobApplicationController::class, 'sendJobInterviewEmail'])->name('send.interview.invitation');
 
 
+
+
+
 //admin route
 
 Route::prefix('admin')->name('admin.')->group(function () {
@@ -174,11 +170,18 @@ Route::prefix('admin')->name('admin.')->group(function () {
 });
 
 
+
+
+
 //route for payment success 
 Route::get('/payment-success', [PaymentController::class, 'handlePaymentaymentSuccess'])->name('payment-success');
 
 //route for payment fail
 Route::get('/payment-fail', [PaymentController::class, 'handlePaymentFail'])->name('payment-fail');
+
+
+
+
 
 //route to show form for resume
 Route::get('/resume', [ResumeController::class, 'create'])->name('resume')->middleware('auth');
@@ -196,9 +199,7 @@ Route::get('/jobs/search', [JobController::class, 'searchJobs'])->name('searchJo
 //job by category
 Route::get('/jobs/byCategory/{category_id}', [JobController::class, 'jobListByCategory'])->name('jobListByCategory');
 
-// Route::resource('jobs', JobController::class);
 
-// Route::get('/job-applications', [EmployerController::class, 'viewApplications'])->middleware('auth')->name('job-applications');
 
 
 Route::get('/skill-search', [ResumeController::class, 'searchSkills'])->name('skills.search');
