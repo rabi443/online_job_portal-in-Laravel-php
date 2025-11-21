@@ -57,7 +57,7 @@ step-5: Commit and Push Your Code by command:
 
 step-1: To stage all modified files, run command : git add .
         OR
-        To stage just the file marked M, run command : it add file_Path
+        To stage just the file marked M, run command : git add file_Path
 
 step-2:  Commit the Change 
         run command : git commit -m "your message "
